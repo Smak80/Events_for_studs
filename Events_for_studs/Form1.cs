@@ -12,10 +12,16 @@ namespace Events_for_studs
 {
     public partial class Form1 : Form
     {
+        private Summator sm = new Summator();
         public Form1()
         {
             InitializeComponent();
         }
 
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            sm.Start();
+            lblResult.Text = sm.Result.ToString();
+        }
     }
 }
